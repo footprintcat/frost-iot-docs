@@ -1,6 +1,9 @@
-# frost-iot-doc
-寒霜物联 官方文档
+> [!CAUTION]
+> 寒霜物联项目目前尚处于开发阶段，暂未完成开发，请过段时间再来看吧
 
+# 寒霜物联 官方文档
+
+请前往 [iot.footprintcat.com](https://iot.footprintcat.com) 查看文档内容
 
 ## 文档许可证
 
