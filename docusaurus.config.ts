@@ -1,16 +1,16 @@
-import {themes as prismThemes} from 'prism-react-renderer';
-import type {Config} from '@docusaurus/types';
+import { themes as prismThemes } from 'prism-react-renderer';
+import type { Config } from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 const config: Config = {
-  title: 'My Site',
-  tagline: 'Dinosaurs are cool',
+  title: '寒霜物联',
+  tagline: '支持轻量化快速接入的 IoT 设备统一接入平台',
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
-  url: 'https://your-docusaurus-site.example.com',
+  url: 'https://iot.footprintcat.com',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/',
@@ -27,8 +27,8 @@ const config: Config = {
   // useful metadata like html lang. For example, if your site is Chinese, you
   // may want to replace "en" with "zh-Hans".
   i18n: {
-    defaultLocale: 'en',
-    locales: ['en'],
+    defaultLocale: 'zh-Hans',
+    locales: ['zh-Hans'],
   },
 
   presets: [
@@ -68,9 +68,9 @@ const config: Config = {
     // Replace with your project's social card
     image: 'img/docusaurus-social-card.jpg',
     navbar: {
-      title: 'My Site',
+      title: '寒霜物联',
       logo: {
-        alt: 'My Site Logo',
+        alt: 'logo',
         src: 'img/logo.svg',
       },
       items: [
@@ -80,11 +80,20 @@ const config: Config = {
           position: 'left',
           label: 'Tutorial',
         },
-        {to: '/blog', label: 'Blog', position: 'left'},
+        { to: '/blog', label: 'Blog', position: 'left' },
         {
-          href: 'https://github.com/facebook/docusaurus',
-          label: 'GitHub',
+          label: '开源地址',
           position: 'right',
+          items: [
+            {
+              href: 'https://github.com/footprintcat/frost-iot',
+              label: 'GitHub',
+            },
+            {
+              href: 'https://gitee.com/footprintcat/frost-iot',
+              label: 'Gitee 镜像',
+            },
+          ]
         },
       ],
     },
@@ -100,23 +109,15 @@ const config: Config = {
             },
           ],
         },
-        {
-          title: 'Community',
-          items: [
-            {
-              label: 'Stack Overflow',
-              href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-            },
-            {
-              label: 'Discord',
-              href: 'https://discordapp.com/invite/docusaurus',
-            },
-            {
-              label: 'X',
-              href: 'https://x.com/docusaurus',
-            },
-          ],
-        },
+        // {
+        //   title: 'Community',
+        //   items: [
+        //     {
+        //       label: '',
+        //       href: '',
+        //     },
+        //   ],
+        // },
         {
           title: 'More',
           items: [
@@ -126,12 +127,19 @@ const config: Config = {
             },
             {
               label: 'GitHub',
-              href: 'https://github.com/facebook/docusaurus',
+              href: 'https://github.com/footprintcat/frost-iot',
+            },
+            {
+              label: 'Gitee 镜像',
+              href: 'https://gitee.com/footprintcat/frost-iot',
             },
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+      copyright: [
+        `Copyright © 2023 - ${new Date().getFullYear()} 武汉脚印猫科技有限公司`,
+        // `Wuhan Footprint Cat Technology Co., Ltd.`,
+      ].join('<br>'),
     },
     prism: {
       theme: prismThemes.github,
