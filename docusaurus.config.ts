@@ -6,7 +6,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
   title: '寒霜物联',
-  tagline: '支持轻量化快速接入的 IoT 设备统一接入平台',
+  tagline: '完全开源的 IoT 设备统一接入平台',
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
