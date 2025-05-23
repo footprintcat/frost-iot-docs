@@ -86,10 +86,22 @@ const config: Config = {
       },
       items: [
         {
-          label: '使用手册',
-          type: 'docSidebar',
-          sidebarId: 'tutorialSidebar',
+          label: '文档',
           position: 'left',
+          items: [
+            {
+              label: '使用手册',
+              type: 'docSidebar',
+              sidebarId: 'tutorialSidebar',
+              // position: 'left',
+            },
+            {
+              label: '开发文档',
+              type: 'docSidebar',
+              sidebarId: 'developmentSidebar',
+              // position: 'left',
+            },
+          ],
         },
         {
           label: '博客',
@@ -147,8 +159,8 @@ const config: Config = {
             },
             {
               label: '开发文档',
-              // label: 'Tutorial',
-              to: '/docs/develop',
+              // label: 'Development',
+              to: '/docs/development/intro',
             },
           ],
         },
