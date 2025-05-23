@@ -5,6 +5,7 @@ import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import Layout from "@theme/Layout";
 import HomepageFeatures from "@site/src/components/HomepageFeatures";
 import Heading from "@theme/Heading";
+import MDXContent from "@theme/MDXContent";
 
 import styles from "./index.module.css";
 
@@ -40,12 +41,19 @@ function HomepageHeader() {
 
 export default function Home(): ReactNode {
   const { siteConfig } = useDocusaurusContext();
+
+  const IndexContent = require(`./_index-content.md`).default;
   return (
     <Layout
       title={`Hello from ${siteConfig.title}`}
       description="Description will go into a meta tag in <head />"
     >
       <HomepageHeader />
+      <div style={{ width: "min(580px, 90%)", margin: "20px auto" }}>
+        <MDXContent>
+          <IndexContent />
+        </MDXContent>
+      </div>
       <main>
         <HomepageFeatures />
       </main>
