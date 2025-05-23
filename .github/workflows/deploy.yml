@@ -110,7 +110,7 @@ jobs:
         REMOTE_HOST: ${{ secrets.DEPLOY_SERVER_HOST }}
         REMOTE_USER: ${{ secrets.DEPLOY_SERVER_USER }}
         SOURCE: "docs-dir/"
-        TARGET: "${{ secrets.SERVER_DEPLOY_PATH }}"
+        TARGET: "${{ secrets.DEPLOY_SERVER_DEPLOY_PATH }}"
         ARGS: "-avz --delete --chown=${{ secrets.DEPLOY_SERVER_FILE_CHOWN_ARG }}"
         # ARGS: "-avz --delete --dry-run"  # 首次运行时建议先使用--dry-run测试
         EXCLUDE: ".git/*, *.md"  # 可选排除文件
