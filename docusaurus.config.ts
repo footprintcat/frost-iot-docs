@@ -86,12 +86,37 @@ const config: Config = {
       },
       items: [
         {
+          label: '使用手册',
           type: 'docSidebar',
           sidebarId: 'tutorialSidebar',
           position: 'left',
-          label: 'Tutorial',
         },
-        { to: '/blog', label: 'Blog', position: 'left' },
+        {
+          label: '博客',
+          // label: 'Blog',
+          to: '/blog',
+          position: 'left',
+        },
+        {
+          label: '关于',
+          // label: 'About',
+          type: 'docSidebar',
+          sidebarId: 'aboutSidebar',
+          position: 'left',
+        },
+        {
+          label: '查看演示',
+          to: 'https://docs-preview.iot.footprintcat.com/',
+          position: 'right',
+          // 样式见 src/css/custom.css
+          className: 'btn-demo',
+          // style: {},
+        },
+        {
+          label: '联系我们',
+          to: '/docs/about/contact',
+          position: 'right',
+        },
         {
           label: '开源地址',
           position: 'right',
@@ -112,29 +137,40 @@ const config: Config = {
       style: 'dark',
       links: [
         {
-          title: 'Docs',
+          title: '文档',
+          // title: 'Docs',
           items: [
             {
-              label: 'Tutorial',
-              to: '/docs/intro',
+              label: '使用手册',
+              // label: 'Tutorial',
+              to: '/docs/tutorial/intro',
+            },
+            {
+              label: '开发文档',
+              // label: 'Tutorial',
+              to: '/docs/develop',
             },
           ],
         },
         {
-          title: 'More',
+          title: '更多',
+          // title: 'More',
           items: [
             {
-              label: 'Blog',
+              label: '博客',
+              // label: 'Blog',
               to: '/blog',
             },
             {
-              label: 'License',
-              to: '/docs/contribute/license',
+              label: '许可证',
+              // label: 'License',
+              to: '/docs/tutorial/contribute/license',
             },
           ],
         },
         {
-          title: 'Open Source',
+          title: '开源',
+          // title: 'Open Source',
           items: [
             {
               label: 'GitHub',

@@ -1,0 +1,10 @@
+{
+  "position": 2,
+  "label": "共创",
+  "collapsible": true,
+  "collapsed": false,
+  "link": {
+    "type": "generated-index",
+    "description": "参与项目贡献"
+  }
+}

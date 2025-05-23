@@ -1,17 +1,17 @@
-import type {ReactNode} from 'react';
-import clsx from 'clsx';
-import Link from '@docusaurus/Link';
-import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
-import Layout from '@theme/Layout';
-import HomepageFeatures from '@site/src/components/HomepageFeatures';
-import Heading from '@theme/Heading';
+import type { ReactNode } from "react";
+import clsx from "clsx";
+import Link from "@docusaurus/Link";
+import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
+import Layout from "@theme/Layout";
+import HomepageFeatures from "@site/src/components/HomepageFeatures";
+import Heading from "@theme/Heading";
 
-import styles from './index.module.css';
+import styles from "./index.module.css";
 
 function HomepageHeader() {
-  const {siteConfig} = useDocusaurusContext();
+  const { siteConfig } = useDocusaurusContext();
   return (
-    <header className={clsx('hero hero--primary', styles.heroBanner)}>
+    <header className={clsx("hero hero--primary", styles.heroBanner)}>
       <div className="container">
         <Heading as="h1" className="hero__title">
           {siteConfig.title}
@@ -20,15 +20,17 @@ function HomepageHeader() {
         <div className={styles.buttons}>
           <Link
             className={clsx("button button--secondary button--lg", styles.btn)}
-            to="/docs/intro">
-            文档
+            to="/docs/intro"
+          >
+            查看演示
           </Link>
-          {/* button--primary   */}
+          {/* button--primary */}
           <Link
-            className={clsx("button  button--link  button--lg", styles.btn)}
-            style={{ color: 'white' }}
-            to="/docs/intro">
-            演示地址
+            className={clsx("button button--link button--lg", styles.btn)}
+            style={{ color: "white" }}
+            to="/docs/intro"
+          >
+            使用手册
           </Link>
         </div>
       </div>
@@ -37,11 +39,12 @@ function HomepageHeader() {
 }
 
 export default function Home(): ReactNode {
-  const {siteConfig} = useDocusaurusContext();
+  const { siteConfig } = useDocusaurusContext();
   return (
     <Layout
       title={`Hello from ${siteConfig.title}`}
-      description="Description will go into a meta tag in <head />">
+      description="Description will go into a meta tag in <head />"
+    >
       <HomepageHeader />
       <main>
         <HomepageFeatures />
