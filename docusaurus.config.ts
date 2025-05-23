@@ -15,10 +15,12 @@ const config: Config = {
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/',
 
+  /*
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'facebook', // Usually your GitHub org/user name.
-  projectName: 'docusaurus', // Usually your repo name.
+  organizationName: 'footprintcat', // Usually your GitHub org/user name.
+  projectName: 'frost-iot', // Usually your repo name.
+  */
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -28,7 +30,10 @@ const config: Config = {
   // may want to replace "en" with "zh-Hans".
   i18n: {
     defaultLocale: 'zh-Hans',
-    locales: ['zh-Hans'],
+    locales: [
+      // refer: https://docusaurus.io/zh-CN/docs/i18n/git
+      'zh-Hans',
+    ],
   },
 
   presets: [
@@ -40,7 +45,11 @@ const config: Config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+            'https://github.com/footprintcat/frost-iot-docs/tree/main/',
+          showLastUpdateTime: true,
+          // The edit URL will target the localized file, instead of the original unlocalized file. Ignored when `editUrl` is a function.
+          editLocalizedFiles: true,
+          // sidebarCollapsed: false,
         },
         blog: {
           showReadingTime: true,
@@ -51,11 +60,13 @@ const config: Config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+            'https://github.com/footprintcat/frost-iot-docs/tree/main/',
           // Useful options to enforce blogging best practices
           onInlineTags: 'warn',
           onInlineAuthors: 'warn',
           onUntruncatedBlogPosts: 'warn',
+          // The edit URL will target the localized file, instead of the original unlocalized file. Ignored when `editUrl` is a function.
+          editLocalizedFiles: true,
         },
         theme: {
           customCss: './src/css/custom.css',
@@ -91,9 +102,9 @@ const config: Config = {
             },
             {
               href: 'https://gitee.com/footprintcat/frost-iot',
-              label: 'Gitee 镜像',
+              label: 'Gitee',
             },
-          ]
+          ],
         },
       ],
     },
@@ -109,15 +120,6 @@ const config: Config = {
             },
           ],
         },
-        // {
-        //   title: 'Community',
-        //   items: [
-        //     {
-        //       label: '',
-        //       href: '',
-        //     },
-        //   ],
-        // },
         {
           title: 'More',
           items: [
@@ -126,16 +128,34 @@ const config: Config = {
               to: '/blog',
             },
             {
+              label: 'License',
+              to: '/docs/contribute/license',
+            },
+          ],
+        },
+        {
+          title: 'Open Source',
+          items: [
+            {
               label: 'GitHub',
               href: 'https://github.com/footprintcat/frost-iot',
             },
             {
-              label: 'Gitee 镜像',
+              label: 'Gitee',
               href: 'https://gitee.com/footprintcat/frost-iot',
             },
           ],
         },
       ],
+      logo: {
+        alt: 'Logo',
+        src: 'img/footprintcat-logo.svg',
+        width: 120,
+        height: 120,
+        style: {
+          filter: "drop-shadow(black 2px 2px 2px)",
+        },
+      },
       copyright: [
         `Copyright © 2023 - ${new Date().getFullYear()} 武汉脚印猫科技有限公司`,
         // `Wuhan Footprint Cat Technology Co., Ltd.`,
@@ -145,7 +165,43 @@ const config: Config = {
       theme: prismThemes.github,
       darkTheme: prismThemes.dracula,
     },
+    tableOfContents: {
+      minHeadingLevel: 2,  // 最小显示的标题级别 (H2)
+      maxHeadingLevel: 4,  // 最大显示的标题级别 (H4)
+    },
+    mermaid: {
+      // refer: https://mermaid.js.org/config/theming.html
+      theme: {
+        light: 'neutral', // default
+        dark: 'dark',
+      },
+    },
   } satisfies Preset.ThemeConfig,
+
+  markdown: {
+    mermaid: true,
+  },
+  themes: [
+    '@docusaurus/theme-mermaid',
+    // document local search
+    // refer: https://github.com/easyops-cn/docusaurus-search-local
+    [
+      require.resolve("@easyops-cn/docusaurus-search-local"),
+      /** @type {import("@easyops-cn/docusaurus-search-local").PluginOptions} */
+      ({
+        // ... Your options.
+        // `hashed` is recommended as long-term-cache of index file is possible.
+        hashed: true,
+
+        // For Docs using Chinese, it is recomended to set:
+        // language: ["en", "zh"],
+        language: ["zh"],
+
+        // If you're using `noIndex: true`, set `forceIgnoreNoIndex` to enable local index:
+        // forceIgnoreNoIndex: true,
+      }),
+    ],
+  ],
 };
 
 export default config;
