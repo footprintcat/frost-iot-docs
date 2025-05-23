@@ -53,6 +53,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
+          name: github-pages  # optional, default is github-pages
           path: build/        # Path of the directory containing the static assets.
           retention-days: 1   # optional, default is 1
 
@@ -73,29 +74,45 @@ jobs:
     runs-on: ubuntu-latest
     needs: build  # 依赖build任务完成
     steps:
-    - name: Validate server path
-      run: |
-        if [ -z "${{ secrets.SERVER_DEPLOY_PATH }}" ]; then
-          echo "::error::Aborting: SERVER_DEPLOY_PATH must be configured in repository secrets"
-          exit 1
-        elif [[ "${{ secrets.SERVER_DEPLOY_PATH }}" == "/"* && ! -d "${{ secrets.SERVER_DEPLOY_PATH }}" ]]; then
-          echo "::error::Aborting: Target directory ${{ secrets.SERVER_DEPLOY_PATH }} does not exist on server"
-          exit 1
-        fi
-
     - name: Download build artifact
       uses: actions/download-artifact@v4
       with:
-        name: github-pages-artifact
+        name: github-pages
+
+    - name: Print directory tree
+      run: |
+        # 安装 tree 命令（Ubuntu）
+        sudo apt-get update && sudo apt-get install -y tree
+        tree ./
+
+    - name: Unzip tar file
+      run: |
+        mkdir ./docs-dir
+        tar -xvf artifact.tar -C ./docs-dir
+        rm -f artifact.tar
+
+    - name: Print directory tree
+      run: |
+        # 打印当前目录的树形结构
+        pwd
+        tree ./
 
     - name: Upload to Server via SSH
       uses: easingthemes/ssh-deploy@v5.1.0
       env:
-        SSH_PRIVATE_KEY: ${{ secrets.SERVER_SSH_KEY }}
-        REMOTE_HOST: ${{ secrets.SERVER_HOST }}
-        REMOTE_USER: ${{ secrets.SERVER_USER }}
-        SOURCE: "build/"
+        # 使用 ssh-keygen 创建一个密钥对，私钥配置在下面，公钥填入服务端 authorized_keys 文件中即可
+        SSH_PRIVATE_KEY: ${{ secrets.DEPLOY_SERVER_SSH_PRIVATE_KEY }}
+        REMOTE_HOST: ${{ secrets.DEPLOY_SERVER_HOST }}
+        REMOTE_USER: ${{ secrets.DEPLOY_SERVER_USER }}
+        SOURCE: "docs-dir/"
         TARGET: "${{ secrets.SERVER_DEPLOY_PATH }}"
-        ARGS: "-avz --delete --chown=${{ secrets.SERVER_USER }}:${{ secrets.SERVER_USER_GROUP }}"
+        ARGS: "-avz --delete --chown=${{ secrets.DEPLOY_SERVER_FILE_CHOWN_ARG }}"
         # ARGS: "-avz --delete --dry-run"  # 首次运行时建议先使用--dry-run测试
         EXCLUDE: ".git/*, *.md"  # 可选排除文件
+        SCRIPT_BEFORE: |
+          whoami
+          ls -al
+        SCRIPT_AFTER: |
+          whoami
+          ls -al
+          echo $RSYNC_STDOUT
