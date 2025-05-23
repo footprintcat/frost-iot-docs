@@ -44,12 +44,15 @@ jobs:
       - name: Install dependencies
         working-directory: ./
         run: |
-          npm ci
+          # npm ci
+          pnpm i
       - name: Build
         working-directory: ./
         run: |
-          npm run clear
-          npm run build
+          # npm run clear
+          # npm run build
+          pnpm run clear
+          pnpm run build
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
