@@ -3,6 +3,7 @@
 
 # 寒霜物联 官方文档
 
+<!-- https://shields.io/badges/static-badge -->
 [![CC-BY-4.0 License (署名 4.0 协议国际版)](https://img.shields.io/badge/License-CC--BY--4.0_License-cyan?logo=creativecommons)](https://opensource.org/license/BSD-3-Clause) [![GitHub commit activity](https://img.shields.io/github/commit-activity/t/footprintcat/frost-iot-docs)](https://github.com/footprintcat/frost-iot-docs/commits/) ![GitHub last commit](https://img.shields.io/github/last-commit/footprintcat/frost-iot-docs)
 
 请前往 [iot.footprintcat.com](https://iot.footprintcat.com) 查看文档内容
