@@ -104,7 +104,7 @@ const config: Config = {
           ],
         },
         {
-          label: '博客',
+          label: '动态', // 博客
           // label: 'Blog',
           to: '/blog',
           position: 'left',
@@ -169,7 +169,7 @@ const config: Config = {
           // title: 'More',
           items: [
             {
-              label: '博客',
+              label: '动态', // 博客
               // label: 'Blog',
               to: '/blog',
             },
