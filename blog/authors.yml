@@ -1,23 +1,19 @@
-yangshun:
-  name: Yangshun Tay
-  title: Front End Engineer @ Facebook
-  url: https://github.com/yangshun
-  image_url: https://github.com/yangshun.png
+footprintcat:
+  name: 脚印猫开源
+  title: 武汉脚印猫科技有限公司
+  # url: https://github.com/footprintcat
+  # image_url: https://github.com/footprintcat.png
+  image_url: /img/footprintcat-logo.svg
   page: true
   socials:
-    x: yangshunz
-    github: yangshun
+    github: footprintcat
+    gitee: https://gitee.com/footprintcat
 
-slorber:
-  name: Sébastien Lorber
-  title: Docusaurus maintainer
-  url: https://sebastienlorber.com
-  image_url: https://github.com/slorber.png
-  page:
-    # customize the url of the author page at /blog/authors/<permalink>
-    permalink: '/all-sebastien-lorber-articles'
+frostiot:
+  name: 寒霜物联
+  title: 寒霜物联项目组
+  # url: https://github.com/orgs/footprintcat/repositories?q=frost-iot
+  image_url: /img/logo.svg
+  page: true
   socials:
-    x: sebastienlorber
-    linkedin: sebastienlorber
-    github: slorber
-    newsletter: https://thisweekinreact.com
+    github: https://github.com/orgs/footprintcat/repositories?q=frost-iot
