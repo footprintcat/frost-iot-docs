@@ -96,6 +96,10 @@ const config: Config = {
               // position: 'left',
             },
             {
+              type: 'html',
+              value: '<hr style="margin: 0; margin-top: 0.2rem;">',
+            },
+            {
               label: '开发文档',
               type: 'docSidebar',
               sidebarId: 'developmentSidebar',
