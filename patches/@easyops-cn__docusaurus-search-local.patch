@@ -1,0 +1,15 @@
+diff --git a/CHANGELOG.md b/CHANGELOG.md
+deleted file mode 100644
+index a558bf12c5e8e776bf8fee6145393d8484fde813..0000000000000000000000000000000000000000
+diff --git a/dist/client/client/theme/SearchBar/SearchBar.module.css b/dist/client/client/theme/SearchBar/SearchBar.module.css
+index 5542bb56b1d4c00e7ce73d4baee32fbc0d4d229a..a4f2d5a4d88bf61f436926f4084c50023f5aafee 100644
+--- a/dist/client/client/theme/SearchBar/SearchBar.module.css
++++ b/dist/client/client/theme/SearchBar/SearchBar.module.css
+@@ -196,7 +196,6 @@ html[data-theme="dark"] .noResultsIcon {
+ }
+ 
+ .searchBarContainer {
+-  margin-left: 16px;
+ }
+ 
+ .searchBarContainer .searchBarLoadingRing {

@@ -4,6 +4,11 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
+patchedDependencies:
+  '@easyops-cn/docusaurus-search-local':
+    hash: 01417bae3c9512d6d7ce82f433e5c22b0af8b82b6bb786cc8ef8b3cf48c0a530
+    path: patches/@easyops-cn__docusaurus-search-local.patch
+
 importers:
 
   .:
@@ -19,7 +24,7 @@ importers:
         version: 3.9.1(@docusaurus/plugin-content-docs@3.9.1(@mdx-js/react@3.1.1(@types/react@19.1.14)(react@19.1.1))(react-dom@19.1.1(react@19.1.1))(react@19.1.1)(typescript@5.6.3))(@mdx-js/react@3.1.1(@types/react@19.1.14)(react@19.1.1))(react-dom@19.1.1(react@19.1.1))(react@19.1.1)(typescript@5.6.3)
       '@easyops-cn/docusaurus-search-local':
         specifier: ^0.52.1
-        version: 0.52.1(@docusaurus/theme-common@3.9.1(@docusaurus/plugin-content-docs@3.9.1(@mdx-js/react@3.1.1(@types/react@19.1.14)(react@19.1.1))(react-dom@19.1.1(react@19.1.1))(react@19.1.1)(typescript@5.6.3))(react-dom@19.1.1(react@19.1.1))(react@19.1.1))(@mdx-js/react@3.1.1(@types/react@19.1.14)(react@19.1.1))(react-dom@19.1.1(react@19.1.1))(react@19.1.1)(typescript@5.6.3)
+        version: 0.52.1(patch_hash=01417bae3c9512d6d7ce82f433e5c22b0af8b82b6bb786cc8ef8b3cf48c0a530)(@docusaurus/theme-common@3.9.1(@docusaurus/plugin-content-docs@3.9.1(@mdx-js/react@3.1.1(@types/react@19.1.14)(react@19.1.1))(react-dom@19.1.1(react@19.1.1))(react@19.1.1)(typescript@5.6.3))(react-dom@19.1.1(react@19.1.1))(react@19.1.1))(@mdx-js/react@3.1.1(@types/react@19.1.14)(react@19.1.1))(react-dom@19.1.1(react@19.1.1))(react@19.1.1)(typescript@5.6.3)
       '@mdx-js/react':
         specifier: ^3.0.0
         version: 3.1.1(@types/react@19.1.14)(react@19.1.1)
@@ -7579,7 +7584,7 @@ snapshots:
       cssesc: 3.0.0
       immediate: 3.3.0
 
-  '@easyops-cn/docusaurus-search-local@0.52.1(@docusaurus/theme-common@3.9.1(@docusaurus/plugin-content-docs@3.9.1(@mdx-js/react@3.1.1(@types/react@19.1.14)(react@19.1.1))(react-dom@19.1.1(react@19.1.1))(react@19.1.1)(typescript@5.6.3))(react-dom@19.1.1(react@19.1.1))(react@19.1.1))(@mdx-js/react@3.1.1(@types/react@19.1.14)(react@19.1.1))(react-dom@19.1.1(react@19.1.1))(react@19.1.1)(typescript@5.6.3)':
+  '@easyops-cn/docusaurus-search-local@0.52.1(patch_hash=01417bae3c9512d6d7ce82f433e5c22b0af8b82b6bb786cc8ef8b3cf48c0a530)(@docusaurus/theme-common@3.9.1(@docusaurus/plugin-content-docs@3.9.1(@mdx-js/react@3.1.1(@types/react@19.1.14)(react@19.1.1))(react-dom@19.1.1(react@19.1.1))(react@19.1.1)(typescript@5.6.3))(react-dom@19.1.1(react@19.1.1))(react@19.1.1))(@mdx-js/react@3.1.1(@types/react@19.1.14)(react@19.1.1))(react-dom@19.1.1(react@19.1.1))(react@19.1.1)(typescript@5.6.3)':
     dependencies:
       '@docusaurus/plugin-content-docs': 3.9.1(@mdx-js/react@3.1.1(@types/react@19.1.14)(react@19.1.1))(debug@4.4.3)(react-dom@19.1.1(react@19.1.1))(react@19.1.1)(typescript@5.6.3)
       '@docusaurus/theme-common': 3.9.1(@docusaurus/plugin-content-docs@3.9.1(@mdx-js/react@3.1.1(@types/react@19.1.14)(react@19.1.1))(react-dom@19.1.1(react@19.1.1))(react@19.1.1)(typescript@5.6.3))(react-dom@19.1.1(react@19.1.1))(react@19.1.1)
