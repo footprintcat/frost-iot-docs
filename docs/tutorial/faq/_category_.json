@@ -1,0 +1,10 @@
+{
+  "position": 4,
+  "label": "常见问题",
+  "collapsible": true,
+  "collapsed": true,
+  "link": {
+    "type": "generated-index",
+    "description": "项目使用常见问题"
+  }
+}
