@@ -115,6 +115,12 @@ const config: Config = {
           ],
         },
         {
+          label: 'API',
+          type: 'docSidebar',
+          sidebarId: 'apiReferenceSidebar',
+          // position: 'left',
+        },
+        {
           label: '动态', // 博客
           // label: 'Blog',
           to: '/blog',
