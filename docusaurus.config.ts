@@ -94,6 +94,13 @@ const config: Config = {
       items: [
         {
           label: '文档',
+          type: 'docSidebar',
+          sidebarId: 'tutorialSidebar',
+          // position: 'left',
+        },
+        /*
+        {
+          label: '文档',
           position: 'left',
           items: [
             {
@@ -114,10 +121,17 @@ const config: Config = {
             },
           ],
         },
+        */
         {
           label: 'API',
           type: 'docSidebar',
           sidebarId: 'apiReferenceSidebar',
+          // position: 'left',
+        },
+        {
+          label: '共创',
+          type: 'docSidebar',
+          sidebarId: 'contributeSidebar',
           // position: 'left',
         },
         {
