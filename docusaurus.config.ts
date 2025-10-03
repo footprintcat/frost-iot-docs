@@ -189,9 +189,12 @@ const config: Config = {
               to: '/docs/tutorial/intro',
             },
             {
-              label: '开发文档',
-              // label: 'Development',
-              to: '/docs/development/intro',
+              label: 'API',
+              to: '/docs/api-reference/intro',
+            },
+            {
+              label: '共创',
+              to: '/docs/contribute/intro',
             },
           ],
         },
@@ -207,7 +210,7 @@ const config: Config = {
             {
               label: '许可证',
               // label: 'License',
-              to: '/docs/tutorial/contribute/license',
+              to: '/docs/tutorial/license',
             },
           ],
         },
