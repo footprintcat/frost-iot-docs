@@ -7,7 +7,8 @@ import type * as Preset from '@docusaurus/preset-classic';
 const config: Config = {
   title: '寒霜物联',
   tagline: '完全开源的 IoT 设备统一接入平台',
-  favicon: 'img/favicon.ico',
+  // favicon: 'img/favicon.ico',
+  favicon: 'img/logo.svg',
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
   future: {
