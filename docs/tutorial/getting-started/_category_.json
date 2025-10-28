@@ -1,0 +1,11 @@
+{
+  "position": 1,
+  "label": "开始",
+  "collapsible": true,
+  "collapsed": true,
+  "link": {
+    "slug": "/category/getting-started",
+    "type": "generated-index",
+    "description": "寒霜物联是一款完全开源的 IoT 设备统一接入平台"
+  }
+}

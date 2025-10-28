@@ -21,7 +21,7 @@ function HomepageHeader() {
         <div className={styles.buttons}>
           <Link
             className={clsx("button button--secondary button--lg", styles.btn)}
-            to="/docs/tutorial/intro"
+            to="/docs/intro"
           >
             查看演示
           </Link>
@@ -29,7 +29,7 @@ function HomepageHeader() {
           <Link
             className={clsx("button button--link button--lg", styles.btn)}
             style={{ color: "white" }}
-            to="/docs/tutorial/intro"
+            to="/docs/intro"
           >
             文档
           </Link>
