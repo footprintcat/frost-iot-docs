@@ -27,4 +27,19 @@ PostgreSQL 是常用的开源的关系型数据库，在本项目中用于数据
 
 ## 配置
 
+数据库授权：
 
+```sql
+-- SELECT * FROM pg_roles;
+-- SELECT * FROM  WHERE rolname = 'frostiot_lan';
+-- update pg_roles set rolcreatedb = 't' WHERE rolname = 'frostiot_lan' ;
+
+-- SELECT * -- grantee, table_schema, table_name, privilege_type
+-- FROM information_schema.table_privileges
+-- -- WHERE grantee = 'frostiot_lan';
+
+-- 授权
+GRANT CREATE ON DATABASE frostiot_lan TO frostiot_lan;
+-- 撤销授权
+REVOKE CREATE ON DATABASE frostiot_lan FROM frostiot_lan;
+```
