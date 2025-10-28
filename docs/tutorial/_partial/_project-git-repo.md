@@ -1,4 +1,5 @@
 <!-- 修改时请同步修改 GitHub 组织简介 README.md -->
+<!-- https://github.com/footprintcat/.github/edit/main/profile/README.md -->
 
 <table>
   <thead>
