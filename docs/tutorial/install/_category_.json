@@ -2,9 +2,9 @@
   "position": 3,
   "label": "安装部署",
   "collapsible": true,
-  "collapsed": false,
+  "collapsed": true,
   "link": {
-    "slug": "/category/faq",
+    "slug": "/category/install",
     "type": "generated-index",
     "description": "项目环境配置及部署流程文档"
   }

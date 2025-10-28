@@ -1,0 +1,11 @@
+{
+  "position": 1,
+  "label": "环境安装配置",
+  "collapsible": true,
+  "collapsed": false,
+  "link": {
+    "slug": "/category/install/env",
+    "type": "generated-index",
+    "description": "项目环境配置"
+  }
+}
