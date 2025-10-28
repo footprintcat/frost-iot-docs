@@ -1,0 +1,11 @@
+{
+  "position": 3,
+  "label": "安装部署",
+  "collapsible": true,
+  "collapsed": false,
+  "link": {
+    "slug": "/category/faq",
+    "type": "generated-index",
+    "description": "项目环境配置及部署流程文档"
+  }
+}

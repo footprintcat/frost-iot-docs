@@ -2,7 +2,7 @@
   "position": 1,
   "label": "开始",
   "collapsible": true,
-  "collapsed": true,
+  "collapsed": false,
   "link": {
     "slug": "/category/getting-started",
     "type": "generated-index",
