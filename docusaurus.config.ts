@@ -187,7 +187,7 @@ const config: Config = {
             {
               label: '使用手册',
               // label: 'Tutorial',
-              to: '/docs/intro',
+              to: '/docs/introduction',
             },
             {
               label: 'API',
