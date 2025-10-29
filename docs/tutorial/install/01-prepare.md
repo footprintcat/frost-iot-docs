@@ -2,6 +2,7 @@
 title: Step 0. 环境准备
 ---
 
+<!-- https://docusaurus.io/zh-CN/docs/markdown-features/tabs -->
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
@@ -58,7 +59,10 @@ TODO
 
 上方生产环境要求的所有环境，以及：
 
-- GraalVM 22.3+，推荐 OpenJDK 17/21/25 版本
+- Visual Studio Build Tools 2022 & C development environment (GraalVM 打包时需要)
+  > 参考 GraalVM 安装步骤安装即可
+- GraalVM 22.3+，推荐 GraalVM Community 25.0.1 版本
+  > GraalVM 社区版：[下载地址(GitHub)](https://github.com/graalvm/graalvm-ce-builds/releases/tag/jdk-25.0.1) | [Windows 安装步骤(英文)](https://www.graalvm.org/jdk25/getting-started/windows/)
 
 :::warning 低于 22.x 版本 GraalVM 将无法成功打包
 请注意：低于 22.x 版本的 GraalVM 打二进制包时会遇到问题，导致无法成功打包。原因如下：
