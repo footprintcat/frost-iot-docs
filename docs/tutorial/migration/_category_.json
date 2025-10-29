@@ -1,0 +1,11 @@
+{
+  "position": 10,
+  "label": "升级、迁移与备份",
+  "collapsible": true,
+  "collapsed": true,
+  "link": {
+    "slug": "/category/migration",
+    "type": "generated-index",
+    "description": "版本升级、数据迁移与备份相关文档，点击下方相关板块可查看。"
+  }
+}
