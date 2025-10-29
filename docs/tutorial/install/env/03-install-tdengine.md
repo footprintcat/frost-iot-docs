@@ -138,7 +138,7 @@ sudo systemctl status taosd
 
 ## 后续
 
-如需数据备份或恢复，或希望彻底卸载，请查阅[升级、迁移与备份](/docs/category/migration)。
+如需了解 TDengine 基础语法，可查阅[这篇文档](/docs/contribute/dev/crud/tdengine)，如需数据备份或恢复，或希望彻底卸载，请查阅[升级、迁移与备份](/docs/category/migration)。
 
   </TabItem>
   <TabItem value="tab-docker" label="Docker">
