@@ -1,0 +1,11 @@
+{
+  "position": 9999,
+  "label": "Ubuntu 系统相关问题",
+  "collapsible": true,
+  "collapsed": true,
+  "link": {
+    "slug": "/category/faq/ubuntu",
+    "type": "generated-index",
+    "description": "Ubuntu 系统相关问题"
+  }
+}
