@@ -136,9 +136,9 @@ sudo systemctl start taosd
 sudo systemctl status taosd
 ```
 
-## 彻底卸载
+## 后续
 
-参考：https://blog.csdn.net/weixin_44462773/article/details/131299485
+如需数据备份或恢复，或希望彻底卸载，请查阅[升级、迁移与备份](/docs/category/migration)。
 
   </TabItem>
   <TabItem value="tab-docker" label="Docker">
