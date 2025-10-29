@@ -19,3 +19,14 @@ draft: true
 ### 代码仓库
 
 - GitHub 组织：https://gitee.com/footprintcat
+
+## 常用的 markdown front matter
+
+```markdown
+---
+# docs: https://docusaurus.io/zh-CN/docs/api/plugins/@docusaurus/plugin-content-docs
+title: 标题
+sidebar_position: 1
+hide_table_of_contents: true # 隐藏右侧 TOC 部分
+---
+```

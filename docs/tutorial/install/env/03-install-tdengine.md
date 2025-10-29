@@ -1,3 +1,15 @@
+---
+# Tab 内部嵌套标题时, 右侧 TOC 中会显示全部标题, 所有这里直接隐藏右侧 TOC 部分
+# docs: https://docusaurus.io/zh-CN/docs/api/plugins/@docusaurus/plugin-content-docs#hide_table_of_contents
+# issue:
+# - https://github.com/facebook/docusaurus/issues/5343
+# - https://github.com/facebook/docusaurus/issues/11519
+hide_table_of_contents: true
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 # TDengine 安装及配置
 
 :::warning
@@ -11,6 +23,9 @@ TDengine 是项目的必要依赖
 ## 简介
 
 TDengine 是国内热门的开源时序数据库，在本项目中用于设备数据报文的持久化存储。
+
+<Tabs>
+  <TabItem value="tab-ubuntu" label="Ubuntu Server (推荐)" default>
 
 ## 安装
 
@@ -110,3 +125,46 @@ sudo rm -rf /var/lib/taos/*
 sudo systemctl start taosd
 sudo systemctl status taosd
 ```
+
+## 彻底卸载
+
+参考：https://blog.csdn.net/weixin_44462773/article/details/131299485
+
+  </TabItem>
+  <TabItem value="tab-docker" label="Docker">
+
+## TDengine Docker 体验
+
+如果您希望使用 Docker 快速安装体验，可以参考以下步骤。
+
+:::note
+实际生产部署时，如无特殊需求，建议将数据库直接安装到物理机上，而不是通过 Docker 进行部署。
+:::
+
+官网文档：https://docs.taosdata.com/get-started/docker/
+
+```sh
+# 不映射数据文件, 数据存储在 Docker 容器节点中（重启容器数据会丢失！）
+docker run -d -p 6030:6030 -p 6041:6041 -p 6043:6043 -p 6044-6049:6044-6049 -p 6044-6045:6044-6045/udp -p 6060:6060 tdengine/tdengine
+```
+
+```sh
+# 在 Linux 系统上, 将数据文件映射到本地目录 [~/data/taos/dnode]
+docker run -d -v ~/data/taos/dnode/data:/var/lib/taos \
+  -v ~/data/taos/dnode/log:/var/log/taos \
+  -p 6030:6030 -p 6041:6041 -p 6043:6043 -p 6044-6049:6044-6049 -p 6044-6045:6044-6045/udp -p 6060:6060 tdengine/tdengine
+```
+
+```batch
+:: 在 Windows 系统上, 将数据文件映射到本地目录 [D:\临时目录\tdengine-test]
+docker run -d -v D:\临时目录\tdengine-test\data:/var/lib/taos ^
+  -v D:\临时目录\tdengine-test\log:/var/log/taos ^
+  -p 6030:6030 -p 6041:6041 -p 6043:6043 -p 6044-6049:6044-6049 -p 6044-6045:6044-6045/udp -p 6060:6060 tdengine/tdengine
+```
+
+:::info 提示
+docker 映射命令：冒号之前是宿主机的，冒号之后是容器内的
+:::
+
+  </TabItem>
+</Tabs>
