@@ -35,11 +35,17 @@ TDengine 是国内热门的开源时序数据库，在本项目中用于设备�
 此处仅列出简易安装步骤，内容更新可能不及时，如需生产部署，建议直接查阅[原始文档](https://docs.taosdata.com/)。
 :::
 
-:::note 参考文档
-- TDengine 官方文档：https://docs.taosdata.com/
-- 使用安装包快速体验 TDengine TSDB：https://docs.taosdata.com/get-started/package/
-- 安装部署：https://docs.taosdata.com/operation/install/#%E4%BD%BF%E7%94%A8-apt-get-%E5%91%BD%E4%BB%A4%E5%AE%89%E8%A3%85
-- 产品组件：https://docs.taosdata.com/reference/components/
+:::note 文档与链接
+- 常用链接
+  - 官方网站：https://www.taosdata.com/tsdb
+  - 官方文档：https://docs.taosdata.com/
+  - GitHub：https://github.com/taosdata/TDengine
+- 部署文档
+  - 使用安装包快速体验 TDengine TSDB：https://docs.taosdata.com/get-started/package/
+  - 安装部署：[https://docs.taosdata.com/operation/install/#%E4...](https://docs.taosdata.com/operation/install/#%E4%BD%BF%E7%94%A8-apt-get-%E5%91%BD%E4%BB%A4%E5%AE%89%E8%A3%85)
+- 参考文档
+  - 产品组件：https://docs.taosdata.com/reference/components/
+  - 默认端口：[https://docs.taosdata.com/operation/planning/#%E7...](https://docs.taosdata.com/operation/planning/#%E7%BD%91%E7%BB%9C%E7%AB%AF%E5%8F%A3%E8%A6%81%E6%B1%82)
 :::
 
 安装命令：
@@ -69,7 +75,11 @@ sudo systemctl status taosd taosadapter taoskeeper taos-explorer
 ```
 
 :::tip 默认密码
-TDengine 默认密码为：`root` / `taosdata`
+TDengine 默认用户名密码为：`root` / `taosdata`
+:::
+
+:::tip 默认端口
+TDengine 默认端口可参考[这篇文档](https://docs.taosdata.com/operation/planning/#%E7%BD%91%E7%BB%9C%E7%AB%AF%E5%8F%A3%E8%A6%81%E6%B1%82)
 :::
 
 其他命令：
@@ -79,7 +89,7 @@ TDengine 默认密码为：`root` / `taosdata`
 taos
 ```
 
-## taosExplorer
+## 在浏览器中可视化查询 (taosExplorer)
 
 TDengine 的可视化管理交互工具的 web 服务。
 
