@@ -25,7 +25,7 @@ TODO
 <Tabs groupId="support-envs">
   <TabItem value="tab-jar" label="使用 .jar 包运行" default>
 
-- JDK 17+，推荐 OpenJDK 17/21/25 版本
+- JDK 17+，可选 LTS 版本为 17/21/25，推荐 OpenJDK 17 ([OpenJDK 下载页](https://jdk.java.net/archive/))
 
 <!--  -->
 
@@ -41,12 +41,17 @@ TODO
 
 ### 开发环境
 
-仅当您需要在本地通过源码运行时，才需要配置以下环境。
+仅当您需要在本地通过源码运行时，才需要配置以下环境。如不需要，可跳过以下配置。
 
 <Tabs groupId="support-envs">
   <TabItem value="tab-jar" label="本地调试或打 .jar 包" default>
 
-上方生产环境要求的所有环境。
+上方生产环境要求的所有环境，但需要注意：
+
+- 项目结构中 SDK 请选择 JDK 17-24 版本，推荐 17/21 版本
+:::info 注意
+**JDK 暂不可选 25 版本**：理论上项目代码兼容 JDK 25 版本，但因 Gradle 8.x 兼容的最高 JVM 版本为 24，所以暂时建议使用 JDK 17 版本进行构建
+:::
 
 <!--  -->
 
@@ -72,6 +77,10 @@ TODO
 - 可能会遇到一些其他问题
 :::
 
+- 若选用 GraalVM 25.x 版本，还需配置一个 17-24 版本的 JDK
+:::info
+因 Gradle 8.x 兼容的最高 JVM 版本为 24，所以 IDEA 项目结构 SDK 需要选择低版本 JDK，构建时临时调整 `JAVA_HOME`、`PATH` 环境变量
+:::
 <!--  -->
 
   </TabItem>
