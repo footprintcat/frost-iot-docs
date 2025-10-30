@@ -18,7 +18,7 @@ draft: true
 
 ### 代码仓库
 
-- GitHub 组织：https://gitee.com/footprintcat
+- [GitHub 组织](https://github.com/footprintcat) | [Gitee 组织](https://gitee.com/footprintcat)
 
 ## 常用的 markdown front matter
 
