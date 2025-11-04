@@ -20,6 +20,10 @@ import TabItem from '@theme/TabItem';
 TDengine 是项目的必要依赖
 :::
 
+:::info 小提示
+本文主要面向新手小白，如果您已熟悉安装步骤，或有现成环境，可直接跳过当前步骤
+:::
+
 ## 简介
 
 TDengine 是国内热门的开源时序数据库，在本项目中用于设备数据报文的持久化存储。
@@ -73,6 +77,11 @@ sudo systemctl start taos-explorer
 # 查看运行状态
 sudo systemctl status taosd taosadapter taoskeeper taos-explorer
 ```
+
+:::info 小提示
+- 如果需要从外部访问数据库，记得开放服务器防火墙 (ufw)，可参考[这篇文档](/docs/tutorial/faq/ubuntu/ufw)
+- 另外，如果部署在云服务器上，并前往云服务器管理页面的安全组/防火墙（不同云厂商叫法不同）放开对应端口
+:::
 
 :::tip 默认密码
 TDengine 默认用户名密码为：`root` / `taosdata`
