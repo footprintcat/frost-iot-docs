@@ -174,6 +174,10 @@ const config: Config = {
               label: 'Gitee',
             },
             {
+              href: 'https://codeberg.org/footprintcat/frost-iot',
+              label: 'Codeberg (镜像)',
+            },
+            {
               href: 'https://gitcode.com/footprintcat/frost-iot',
               label: 'GitCode (镜像)',
             },
@@ -230,6 +234,10 @@ const config: Config = {
             {
               label: 'Gitee',
               href: 'https://gitee.com/footprintcat/frost-iot',
+            },
+            {
+              label: 'Codeberg (镜像)',
+              href: 'https://codeberg.org/footprintcat/frost-iot',
             },
             {
               label: 'GitCode (镜像)',
