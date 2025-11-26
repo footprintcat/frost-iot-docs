@@ -53,10 +53,10 @@ sudo apt install postgresql-18
 
 :::info 如果之前安装过其他版本，需要先彻底卸载，再安装
 
-检查已安装的 PostgreSQL 版本​：
+检查已安装的 PostgreSQL 版本：
 
 ```sh
-dpkg -l | grep postgresql # 检查已安装的 PostgreSQL 版本​
+dpkg -l | grep postgresql # 检查已安装的 PostgreSQL 版本
 ```
 
 卸载命令：
