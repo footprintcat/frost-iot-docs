@@ -262,7 +262,7 @@ const config: Config = {
       copyright: [
         `Copyright © 2023 - ${new Date().getFullYear()} 武汉脚印猫科技有限公司`,
         // `Wuhan Footprint Cat Technology Co., Ltd.`,
-      ].join('<br>'),
+      ].join('<br />'),
     },
     prism: {
       theme: prismThemes.github,
