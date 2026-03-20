@@ -15,6 +15,9 @@
     "write-heading-ids": "docusaurus write-heading-ids",
     "typecheck": "tsc"
   },
+  "resolutions": {
+    "serialize-javascript": "^7.0.3"
+  },
   "dependencies": {
     "@docusaurus/core": "3.9.2",
     "@docusaurus/preset-classic": "3.9.2",
@@ -46,5 +49,11 @@
   },
   "engines": {
     "node": ">=20.0"
+  },
+  "json-comments": {
+    "tips": "请安装JSONComments插件为JSON文件提供注释功能, 详见: https://github.com/zhangfisher/json_comments_extension",
+    "package.json": {
+      "resolutions.serialize-javascript": "temporary fix: https://github.com/footprintcat/frost-iot-docs/security/dependabot/22"
+    }
   }
 }
