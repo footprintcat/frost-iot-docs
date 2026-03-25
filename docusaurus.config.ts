@@ -257,6 +257,7 @@ const config: Config = {
         height: 120,
         style: {
           filter: "drop-shadow(black 2px 2px 2px)",
+          userSelect: 'none',
         },
       },
       copyright: [
@@ -306,7 +307,7 @@ const config: Config = {
         // `hashed` is recommended as long-term-cache of index file is possible.
         hashed: true,
 
-        // For Docs using Chinese, it is recomended to set:
+        // For Docs using Chinese, it is recommended to set:
         language: ["en", "zh"],
 
         // If you're using `noIndex: true`, set `forceIgnoreNoIndex` to enable local index:
