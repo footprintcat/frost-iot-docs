@@ -10,6 +10,6 @@ draft: false
 
 # 项目路线图
 
-<!-- truncate -->
+{/* truncate */}
 
 [2025 路线图 Q2-Q4](./2025-Q2-Q4.md)

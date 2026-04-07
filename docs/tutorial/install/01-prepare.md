@@ -2,7 +2,7 @@
 title: Step 0. 环境准备
 ---
 
-<!-- https://docusaurus.io/zh-CN/docs/markdown-features/tabs -->
+{/* https://docusaurus.io/zh-CN/docs/markdown-features/tabs */}
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
@@ -23,18 +23,16 @@ TODO
 ### 生产环境
 
 <Tabs groupId="support-envs">
-  <TabItem value="tab-jar" label="使用 .jar 包运行" default>
+<TabItem value="tab-jar" label="使用 .jar 包运行" default>
 
 - JDK 17+，可选 LTS 版本为 17/21/25，推荐 OpenJDK 17 ([OpenJDK 下载页](https://jdk.java.net/archive/))
 
-<!--  -->
-
-  </TabItem>
-  <TabItem value="tab-graalvm" label="使用 GraalVM 编译的二进制包运行">
+</TabItem>
+<TabItem value="tab-graalvm" label="使用 GraalVM 编译的二进制包运行">
 
 无需配置 JDK
 
-  </TabItem>
+</TabItem>
 </Tabs>
 
 ---
@@ -43,8 +41,12 @@ TODO
 
 仅当您需要在本地通过源码运行时，才需要配置以下环境。如不需要，可跳过以下配置。
 
+开发工具：
+
+- IntelliJ IDEA 2026.1 (Ultimate Edition)
+
 <Tabs groupId="support-envs">
-  <TabItem value="tab-jar" label="本地调试或打 .jar 包" default>
+<TabItem value="tab-jar" label="本地调试或打 .jar 包" default>
 
 上方生产环境要求的所有环境，但需要注意：
 
@@ -53,10 +55,8 @@ TODO
 **JDK 暂不可选 25 版本**：理论上项目代码兼容 JDK 25 版本，但因 Gradle 8.x 兼容的最高 JVM 版本为 24，所以暂时建议使用 JDK 17 版本进行构建
 :::
 
-<!--  -->
-
-  </TabItem>
-  <TabItem value="tab-graalvm" label="GraalVM 打原生包">
+</TabItem>
+<TabItem value="tab-graalvm" label="GraalVM 打原生包">
 
 :::note
 以下依赖仅当需要原生打包时需要，如直接使用打好的原生包，则不需要以下环境。
@@ -81,7 +81,6 @@ TODO
 :::info
 因 Gradle 8.x 兼容的最高 JVM 版本为 24，所以 IDEA 项目结构 SDK 需要选择低版本 JDK，构建时临时调整 `JAVA_HOME`、`PATH` 环境变量
 :::
-<!--  -->
 
-  </TabItem>
+</TabItem>
 </Tabs>
