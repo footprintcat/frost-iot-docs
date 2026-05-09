@@ -31,21 +31,21 @@ jobs:
     steps:
       # 切换分支
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
             # Use `fetch-depth: 0` to ensure Docusaurus's last update time displays correctly.
             fetch-depth: 0
       - name: Setup Pages
-        uses: actions/configure-pages@v5
+        uses: actions/configure-pages@v6
       # docs: https://github.com/marketplace/actions/setup-pnpm
       - name: Setup pnpm
-        uses: pnpm/action-setup@v4
+        uses: pnpm/action-setup@v6
         with:
-          version: 10
+          version: 11
       - name: Setup Node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v6
         with:
-          node-version: 22.x
+          node-version: 24.x
           cache: 'pnpm'
       - name: Install dependencies
         working-directory: ./
@@ -76,7 +76,7 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v5
 
   # 上传至服务器并部署
   upload:
@@ -109,7 +109,7 @@ jobs:
         tree ./
 
     - name: Upload to Server via SSH
-      uses: easingthemes/ssh-deploy@v5.1.0
+      uses: easingthemes/ssh-deploy@v6.0.1
       env:
         # 使用 ssh-keygen 创建一个密钥对，私钥配置在下面，公钥填入服务端 authorized_keys 文件中即可
         SSH_PRIVATE_KEY: ${{ secrets.DEPLOY_SERVER_SSH_PRIVATE_KEY }}
