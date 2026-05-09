@@ -1,6 +1,12 @@
+dedupePeers: true
+
+overrides:
+  # temporary fix: https://github.com/footprintcat/frost-iot-docs/security/dependabot/22
+  'serialize-javascript': ^7.0.5
+
 allowBuilds:
   '@swc/core': true
-  core-js: false
+  'core-js': false
 
 patchedDependencies:
   '@easyops-cn/docusaurus-search-local': patches/@easyops-cn__docusaurus-search-local.patch
