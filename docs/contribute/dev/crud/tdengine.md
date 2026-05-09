@@ -10,7 +10,7 @@ title: TDengine 增删改查
 
 以下仅记录部分常用的 CRUD SQL，开始贡献前，建议您先学习 TDengine 的[基本语法](https://docs.taosdata.com/basic/)。
 
-:::note 参考文档
+:::note[参考文档]
 数据写入：https://docs.taosdata.com/basic/insert/
 :::
 

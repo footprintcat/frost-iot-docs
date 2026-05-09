@@ -1,2 +1,6 @@
+allowBuilds:
+  '@swc/core': true
+  core-js: false
+
 patchedDependencies:
   '@easyops-cn/docusaurus-search-local': patches/@easyops-cn__docusaurus-search-local.patch

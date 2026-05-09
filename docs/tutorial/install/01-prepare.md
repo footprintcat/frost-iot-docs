@@ -51,7 +51,7 @@ TODO
 上方生产环境要求的所有环境，但需要注意：
 
 - 项目结构中 SDK 请选择 JDK 17-24 版本，推荐 17/21 版本
-:::info 注意
+:::info[注意]
 **JDK 暂不可选 25 版本**：理论上项目代码兼容 JDK 25 版本，但因 Gradle 8.x 兼容的最高 JVM 版本为 24，所以暂时建议使用 JDK 17 版本进行构建
 :::
 
@@ -69,7 +69,7 @@ TODO
 - GraalVM 22.3+，推荐 GraalVM Community 25.0.1 版本
   > GraalVM 社区版：[下载地址(GitHub)](https://github.com/graalvm/graalvm-ce-builds/releases/tag/jdk-25.0.1) | [Windows 安装步骤(英文)](https://www.graalvm.org/jdk25/getting-started/windows/)
 
-:::warning 低于 22.x 版本 GraalVM 将无法成功打包
+:::warning[低于 22.x 版本 GraalVM 将无法成功打包]
 请注意：低于 22.x 版本的 GraalVM 打二进制包时会遇到问题，导致无法成功打包。原因如下：
 - Windows 系统下，21.x 及以下版本对系统编码格式及 Visual Studio 所安装语言有要求，需要修改 GraalVM 内部脚本并卸载 Visual Studio 中文语言包
 - Spring Boot 3.x 最低支持 JDK 17
