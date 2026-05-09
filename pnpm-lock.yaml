@@ -6,7 +6,7 @@ settings:
   excludeLinksFromLockfile: false
 
 overrides:
-  serialize-javascript: ^7.0.3
+  serialize-javascript: ^7.0.5
 
 patchedDependencies:
   '@easyops-cn/docusaurus-search-local': 961d6ce0fbb35cba66e598ae03b5dbe2b40776ca6d6feceb70874e961cf74aa9
