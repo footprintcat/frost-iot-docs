@@ -40,8 +40,10 @@ jobs:
       # docs: https://github.com/marketplace/actions/setup-pnpm
       - name: Setup pnpm
         uses: pnpm/action-setup@v6
-        with:
-          version: 11
+        # fix build error:
+        #   Error: Multiple versions of pnpm specified: - version 11 in the GitHub Action config with the key "version" - version pnpm@11.0.8 in the package.json with the key "packageManager" Remove one of these versions to avoid version mismatch errors like ERR_PNPM_BAD_PM_VERSION
+        # with:
+        #   version: 11
       - name: Setup Node.js
         uses: actions/setup-node@v6
         with:
